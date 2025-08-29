@@ -1,0 +1,36 @@
+package cau6;
+import java.util.Scanner;
+public class ThuaSoNguyenTo {
+	public int inPut(){
+		int num;
+		do {
+			System.out.print("Hãy nhập một số n > 0: ")	;
+			Scanner n=new Scanner(System.in);
+			num = n.nextInt();
+		} while(num<=0);
+		return num;
+	}
+	
+	public void timThuaSo(int num){
+		int so, i;	
+		i = 2;
+		System.out.print(num + " = ");
+		do{
+			if(num % i == 0){
+				num /= i;
+				System.out.print(" "+i);
+				i = 1;
+				if(num != 1)
+					System.out.print(" * ");
+			}
+			i++;
+		} while(num != 1);
+	}
+	
+	public static void main(String[] args) { 
+		int n;
+		ThuaSoNguyenTo t1 = new ThuaSoNguyenTo();
+		n = t1.inPut();
+		t1.timThuaSo(n);
+	}
+}

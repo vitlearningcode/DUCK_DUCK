@@ -1,0 +1,49 @@
+package cau4;
+
+import java.util.Scanner;
+
+public class SHH {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Nhập số nguyên dương n từ bàn phím
+        System.out.print("Nhập một số nguyên dương n: ");
+        int n = scanner.nextInt();
+        
+        // In ra số lượng và các số hoàn hảo nhỏ hơn n
+        System.out.println("Có " + countPerfectNumbers(n) + " số hoàn hảo nhỏ hơn " + n + ":");
+        printPerfectNumbers(n);
+    }
+    
+    // Hàm kiểm tra xem một số có phải là số hoàn hảo hay không
+    public static boolean isPerfectNumber(int num) {
+        int sum = 0;
+        for (int i = 1; i <= num / 2; i++) {
+            if (num % i == 0) {
+                sum += i;
+            }
+        }
+        return sum == num;
+    }
+    
+    // Hàm đếm số lượng số hoàn hảo nhỏ hơn n
+    public static int countPerfectNumbers(int n) {
+        int count = 0;
+        for (int i = 1; i < n; i++) {
+            if (isPerfectNumber(i)) {
+                count++;
+            }
+        }
+        return count;
+    }
+    
+    // Hàm in ra các số hoàn hảo nhỏ hơn n
+    public static void printPerfectNumbers(int n) {
+        for (int i = 1; i < n; i++) {
+            if (isPerfectNumber(i)) {
+                System.out.print(i + " ");
+            }
+        }
+        System.out.println(); // In xuống dòng để kết thúc dòng số hoàn hảo
+    }
+}

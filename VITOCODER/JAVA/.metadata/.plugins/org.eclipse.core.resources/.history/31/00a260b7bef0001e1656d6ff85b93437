@@ -1,0 +1,147 @@
+package cau2;
+
+import java.util.Scanner;
+
+public class ExArr {
+	public static void main (String[] args) {
+		
+	}
+	public static Scanner sc = new Scanner(System.in);
+	
+	public void inArr(int a[]) {
+		
+		for (int i = 0; i < a.length; i++) {
+			System.out.print("Nhap vao a["+i+"] = ");
+			a[i] = sc.nextInt();
+	
+		}
+		System.out.print("\n");
+	}
+	
+	public void outArr(int a[]) {
+		for (int i = 0; i < a.length; i++) {
+			System.out.print(a[i] + " ");
+	
+		}
+		System.out.print("\n");
+	}
+	
+	public void sortA(int a[]) {
+		for (int i = 0; i < a.length - 1; i++) 
+			for (int j = i + 1; j < a.length; j++)
+				if (a[i] > a[j]) {
+					int temp = a[i];
+						a[i] = a[j];
+						a[j] = temp;
+				}
+		System.out.print("\n");	
+	}
+	
+	public void sortD(int a[]) {
+		for (int i = 0; i < a.length - 1; i++) 
+			for (int j = i + 1; j < a.length; j++)
+				if (a[i] < a[j]) {
+					int temp = a[i];
+						a[i] = a[j];
+						a[j] = temp;
+				}
+		System.out.print("\n");	
+	}
+	
+	public void demphantuLe(int a[]) {
+		for (int i = 0; i < a.length; i++) {
+			if (a[i] % 2 != 0)
+				System.out.print(a[i] + " ");
+		}
+		System.out.print("\n");	
+	}
+	
+	public void demphantuChan(int a[]) {
+		for (int i = 0; i < a.length; i++) {
+			if (a[i] % 2 == 0)
+				System.out.print(a[i] + " ");
+		}
+		System.out.print("\n");	
+	}
+	
+	public int tongcacPT(int a[]) {
+		int sum = 0;
+		for (int i = 0; i < a.length; i++) {
+			
+				sum += a[i];
+		}
+		return sum;	
+	}
+	
+	public boolean KT(int n) {
+		if (n < 2) return false;
+		for (int i  = 0; i < Math.sqrt(n); i++) {
+			if (n % i == 0)
+				return false;
+		}
+		return true;
+	}
+	
+	public int demSNT(int a[]) {
+		int dem = 0;
+		for (int i = 0; i < a.length; i++) {
+			if (KT(a[i]))
+				dem++;
+		}
+		System.out.print("\n");
+		return dem;
+	}
+	
+	public void inSNT(int a[]) {
+		for (int i = 0; i < a.length; i++) {
+			if (KT(a[i]))
+				System.out.print(a[i]);
+		}
+		System.out.print("\n");	
+	}
+	
+	public boolean soHH (int n) {
+		int sum = 0;
+		for (int i = 0; i < n/2; i++) {
+			if (n  % i == 0)
+				sum += i;
+		}
+		if (sum == n)
+			return true;
+		else
+			return false;
+	}
+	
+	public int demSohh (int a[]) {
+		int dem = 0;
+		for (int i = 0; i < a.length; i++) {
+			if (soHH(a[i]))
+				dem++;
+		}
+		return dem;
+	}
+	
+	public void inShh (int a[]) {
+		for (int i = 0; i < a.length; i++) {
+			System.out.print(a[i] + " ");		
+		}
+	}
+	
+}	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

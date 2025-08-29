@@ -1,0 +1,8 @@
+INDEX VERSION 1.134+D:\Download\VITOCODER\JAVA\.metadata\.plugins\org.eclipse.jdt.core
+1657330681.index
+1865797976.index
+846150321.index
+3413270776.index
+2886446866.index
+1107676734.index
+3675037572.index

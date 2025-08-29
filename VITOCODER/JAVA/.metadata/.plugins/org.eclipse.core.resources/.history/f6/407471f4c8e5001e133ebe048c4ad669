@@ -1,0 +1,15 @@
+package cau9;
+
+import java.util.Scanner;
+
+public class giaithua {
+	public static void main (String[] args) {
+		int n = new Scanner(System.in).nextInt();
+		int gt = 1;
+		while (n > 0) {
+			gt *= n;
+			--n;
+		}
+		System.out.print(gt);
+	}
+}

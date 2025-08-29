@@ -1,0 +1,17 @@
+package cau2;
+
+import java.util.Scanner;
+
+public class Two_b {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.next().charAt(0);
+		
+		String[] ic = {"Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};
+		
+		if (n >= 0 && n <= 9)
+			System.out.print(ic[Character.getNumericValue(n)]);
+		
+		sc.close();
+	}
+}

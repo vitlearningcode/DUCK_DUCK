@@ -1,0 +1,29 @@
+package cau4;
+
+import java.util.Scanner;
+
+public class SHH {
+	public static boolean Kt(int n) {
+		int sum = 0;
+		for (int i = 1; i <= n/2; i++) {
+			if (n % i == 0)
+				sum += i;
+		}
+		return (sum == n);
+	}
+	
+	public static void SHH(int n) {
+		System.out.print("Cac so hoan hao nho hon " + n + " la: ");
+		for (int i = 1; i < n; i++) {
+			if (Kt(i))
+				System.out.print(i + "\t");
+		}
+	}
+	public static void main (String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Nhaap vao n: ");
+		int n = sc.nextInt();
+		SHH(n);
+		sc.close();
+	}
+}

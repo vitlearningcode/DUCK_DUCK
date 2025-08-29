@@ -1,0 +1,200 @@
+package cau2;
+
+import java.util.Scanner;
+
+public class ExArr {
+	public static void main (String[] args) {
+		ExArr g = new ExArr();
+		int n = g.inPut();
+		int a[] = new int [n];
+		
+		System.out.print("Mang vua nhap: ");
+		g.outArr(a);
+		
+		System.out.print("Sap xep mang tang dan: ");
+		g.sortA(a);
+		g.outArr(a);
+
+		System.out.print("Sap xep mang giam dan: ");
+		g.sortD(a);
+		g.outArr(a);
+	
+		int le = g.demphantuLe(a);
+		System.out.printf("co %d pha tu le trong mang\n", le);
+		
+		int chan = g.demphantuChan(a);
+		System.out.printf("co %d pha tu chan trong mang\n", chan);
+	}
+	public static Scanner sc = new Scanner(System.in);
+	
+	public int inPut () {
+		int n; 
+		do {
+			System.out.print("Nhap vao so phan tu cua mang: ");
+			n = sc.nextInt();
+		} while ( n <= 0);
+		return n;
+	}
+	
+	public void inArr(int a[]) {
+		
+		for (int i = 0; i < a.length; i++) {
+			System.out.print("Nhap vao a["+i+"] = ");
+			a[i] = sc.nextInt();
+	
+		}
+		System.out.print("\n");
+	}
+	
+	public void outArr(int a[]) {
+		for (int i = 0; i < a.length; i++) {
+			System.out.print(a[i] + " ");
+	
+		}
+		System.out.print("\n");
+	}
+	
+	public void sortA(int a[]) {
+		for (int i = 0; i < a.length - 1; i++) 
+			for (int j = i + 1; j < a.length; j++)
+				if (a[i] > a[j]) {
+					int temp = a[i];
+						a[i] = a[j];
+						a[j] = temp;
+				}
+		System.out.print("\n");	
+	}
+	
+	public void sortD(int a[]) {
+		for (int i = 0; i < a.length - 1; i++) 
+			for (int j = i + 1; j < a.length; j++)
+				if (a[i] < a[j]) {
+					int temp = a[i];
+						a[i] = a[j];
+						a[j] = temp;
+				}
+		System.out.print("\n");	
+	}
+	
+	public int demphantuLe(int a[]) {
+		int dem = 0;
+		for (int i = 0; i < a.length; i++) {
+			if (a[i] % 2 != 0)
+				dem++;
+		}
+		return dem;
+	}
+	
+	public int demphantuChan(int a[]) {
+		int dem = 0;
+		for (int i = 0; i < a.length; i++) {
+			if (a[i] % 2 == 0)
+				dem++;
+		}
+		return dem;	
+	}
+	
+	public int tongcacPT(int a[]) {
+		int sum = 0;
+		for (int i = 0; i < a.length; i++) {
+			
+				sum += a[i];
+		}
+		return sum;	
+	}
+	
+	public boolean KT(int n) {
+		if (n < 2) return false;
+		for (int i  = 0; i < Math.sqrt(n); i++) {
+			if (n % i == 0)
+				return false;
+		}
+		return true;
+	}
+	
+	public int demSNT(int a[]) {
+		int dem = 0;
+		for (int i = 0; i < a.length; i++) {
+			if (KT(a[i]))
+				dem++;
+		}
+		System.out.print("\n");
+		return dem;
+	}
+	
+	public void inSNT(int a[]) {
+		for (int i = 0; i < a.length; i++) {
+			if (KT(a[i]))
+				System.out.print(a[i]);
+		}
+		System.out.print("\n");	
+	}
+	
+	public boolean soHH (int n) {
+		int sum = 0;
+		for (int i = 0; i < n/2; i++) {
+			if (n  % i == 0)
+				sum += i;
+		}
+		if (sum == n)
+			return true;
+		else
+			return false;
+	}
+	
+	public int demSohh (int a[]) {
+		int dem = 0;
+		for (int i = 0; i < a.length; i++) {
+			if (soHH(a[i]))
+				dem++;
+		}
+		return dem;
+	}
+	
+	public void inShh (int a[]) {
+		for (int i = 0; i < a.length; i++) {
+			System.out.print(a[i] + " ");		
+		}
+		System.out.print("\n");
+	}
+	
+	public int timVitriXc (int a[], int x) {
+		int vt = 0;
+		for (int i = 0; i < a.length; i++) {
+			if (a[i] == x) {
+				vt = i;
+				break;
+			}			
+		}
+		return vt;
+	}
+	
+	public int demX (int a[], int x) {
+		int dem = 0;
+		for (int i = 0; i < a.length; i++) {
+			if (a[i] == x) {
+				dem ++;				
+			}			
+		}
+		return dem;
+	}
+	
+	
+}	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

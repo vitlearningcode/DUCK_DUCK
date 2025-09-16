@@ -103,11 +103,3 @@ Thưởng thức vài khoảnh khắc để giải trí sau khi chạy `DUCK_DUC
 
 ---
 
-💡 Tip: Nếu bạn tìm thêm được GIF nào siêu bá đạo, đừng ngại mà PR thẳng vào repo nhé 😉
-
-```
-
----
-
-Bạn có muốn mình làm thêm một **logo đơn giản (PNG/SVG)** cho `DUCK_DUCK` (kiểu con vịt pixel art hoặc icon vui nhộn) để gắn ở đầu README cho thêm phần nhận diện không?
-```

@@ -1,6 +1,3 @@
-Ok, mình ráp cho bạn nguyên cái **README.md full** vừa chuyên nghiệp vừa “vui nhộn” theo đúng style bạn muốn. Bạn chỉ cần copy vào repo `DUCK_DUCK` là chạy ngon luôn:
-
-````markdown
 # 🦆 DUCK_DUCK  
 ![GitHub stars](https://img.shields.io/github/stars/vitlearningcode/DUCK_DUCK?style=flat-square)  
 ![GitHub forks](https://img.shields.io/github/forks/vitlearningcode/DUCK_DUCK?style=flat-square)  
